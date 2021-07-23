@@ -28,7 +28,7 @@ function custom_post_type() {
         'add_new'               => __( 'Agregar nuevo', 'text_domain' ),
         'new_item'              => __( 'Nuevo Perro', 'text_domain' ),
         'edit_item'             => __( 'Editar Perro', 'text_domain' ),
-        'update_item'           => __( 'Actaulizar Perro', 'text_domain' ),
+        'update_item'           => __( 'Actualizar Perro', 'text_domain' ),
         'view_item'             => __( 'Ver Perro', 'text_domain' ),
         'view_items'            => __( 'Ver Perros', 'text_domain' ),
         'search_items'          => __( 'Buscar Perro', 'text_domain' ),
@@ -49,7 +49,7 @@ function custom_post_type() {
         'description'           => __( 'Perros Descripcion', 'text_domain' ),
         'labels'                => $labels,
         'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions' ),
-        'taxonomies'            => array( 'category', 'post_tag' ),
+        //'taxonomies'            => array( 'category', 'post_tag' ),
         'hierarchical'          => false,
         'public'                => true,
         'show_ui'               => true,
@@ -73,9 +73,9 @@ function taxonomia_tamaño_perro(){
         'tamaño perro',
         'perros',
         array(
-            'label' => __('Tamaño del Perro'),
+            'label' => __('Tamaño Perro'),
             'rewrite' => array('slug' => 'tamaño-perro'),
-            'hierarchical' => true,
+            'hierarchical' => false,
         )
     );
 }
