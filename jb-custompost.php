@@ -4,7 +4,7 @@
 Plugin Name: JB Custom Post Type
 Plugin URI:
 Description: Plugin para Custom Post
-Version: 2.0
+Version: 2.1
 Author: jbortweb
 Author URI:
 License: GPL2
@@ -67,3 +67,17 @@ function custom_post_type() {
  
 }
 add_action( 'init', 'custom_post_type', 0 );
+
+function taxonomia_tamaño_perro(){
+    register_taxonomy(
+        'tamaño perro',
+        'perros',
+        array(
+            'label' => __('Tamaño del Perro'),
+            'rewrite' => array('slug' => 'tamaño-perro'),
+            'hierarchical' => true,
+        )
+    );
+}
+
+add_action('init', 'taxonomia_tamaño_perro');
